@@ -1,9 +1,8 @@
-package ec.edu.ups.pds.modelo.entity;
+package ec.edu.ups.pds.modelo.entity.factory;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "abstract_vehiculo", schema = "factory")
+@MappedSuperclass
 public abstract class VehiculoAbstract {
     @Id
     @Column(name="vin", nullable = false)

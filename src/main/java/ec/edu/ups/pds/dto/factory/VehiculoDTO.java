@@ -1,4 +1,9 @@
-package ec.edu.ups.pds.dto;
+package ec.edu.ups.pds.dto.factory;
+
+import ec.edu.ups.pds.Enum.TipoVehiculo;
+import ec.edu.ups.pds.modelo.entity.factory.AutoEntity;
+import ec.edu.ups.pds.modelo.entity.factory.CamionEntity;
+import ec.edu.ups.pds.modelo.entity.factory.CamionetaEntity;
 
 public class VehiculoDTO {
     private String vin;
@@ -38,6 +43,60 @@ public class VehiculoDTO {
         this.unidadPotencia = unidadPotencia;
         this.tipoEspecifico = tipoEspecifico;
         this.tipoVehiculo = tipoVehiculo;
+    }
+
+    public VehiculoDTO(AutoEntity entity) {
+        this.vin = entity.getVin();
+        this.marca = entity.getMarca();
+        this.modelo = entity.getModelo();
+        this.anio = entity.getAnio();
+        this.color = entity.getColor();
+        this.chasis = entity.getChasis();
+        this.placa = entity.getPlaca();
+        this.ram = entity.getRam();
+        this.numeroEjes = entity.getNumeroEjes();
+        this.numeroAsientos = entity.getNumeroAsientos();
+        this.tipoCombustible = entity.getTipoCombustible();
+        this.potencia = entity.getPotencia();
+        this.unidadPotencia = entity.getUnidadPotencia();
+        this.tipoEspecifico = entity.getTipoAuto();
+        this.tipoVehiculo = TipoVehiculo.AUTO.toString();
+    }
+
+    public VehiculoDTO(CamionEntity entity) {
+        this.vin = entity.getVin();
+        this.marca = entity.getMarca();
+        this.modelo = entity.getModelo();
+        this.anio = entity.getAnio();
+        this.color = entity.getColor();
+        this.chasis = entity.getChasis();
+        this.placa = entity.getPlaca();
+        this.ram = entity.getRam();
+        this.numeroEjes = entity.getNumeroEjes();
+        this.numeroAsientos = entity.getNumeroAsientos();
+        this.tipoCombustible = entity.getTipoCombustible();
+        this.potencia = entity.getPotencia();
+        this.unidadPotencia = entity.getUnidadPotencia();
+        this.tipoEspecifico = entity.getTipoCamion();
+        this.tipoVehiculo = TipoVehiculo.AUTO.toString();
+    }
+
+    public VehiculoDTO(CamionetaEntity entity) {
+        this.vin = entity.getVin();
+        this.marca = entity.getMarca();
+        this.modelo = entity.getModelo();
+        this.anio = entity.getAnio();
+        this.color = entity.getColor();
+        this.chasis = entity.getChasis();
+        this.placa = entity.getPlaca();
+        this.ram = entity.getRam();
+        this.numeroEjes = entity.getNumeroEjes();
+        this.numeroAsientos = entity.getNumeroAsientos();
+        this.tipoCombustible = entity.getTipoCombustible();
+        this.potencia = entity.getPotencia();
+        this.unidadPotencia = entity.getUnidadPotencia();
+        this.tipoEspecifico = entity.getTipoCamioneta();
+        this.tipoVehiculo = TipoVehiculo.AUTO.toString();
     }
 
     public String getVin() {

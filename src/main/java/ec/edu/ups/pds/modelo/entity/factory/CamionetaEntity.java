@@ -1,36 +1,31 @@
-package ec.edu.ups.pds.modelo.entity;
+package ec.edu.ups.pds.modelo.entity.factory;
 
-import ec.edu.ups.pds.dto.VehiculoDTO;
+import ec.edu.ups.pds.dto.factory.VehiculoDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "camion", schema = "factory")
-public class CamionEntity extends VehiculoAbstract {
+@Table(name = "camioneta", schema = "factory")
+public class CamionetaEntity extends VehiculoAbstract {
     @Id
     @Column(name="vin", nullable = false)
     private String vin;
 
-    @Column(name="tipo_camion", nullable = false)
-    private String tipoCamion;
+    @Column(name="tipo_camioneta", nullable = false)
+    private String tipoCamioneta;
 
-    public CamionEntity(String vin, String tipoCamion) {
-        this.vin = vin;
-        this.tipoCamion = tipoCamion;
-    }
-
-    public CamionEntity() {
+    public CamionetaEntity() {
 
     }
 
-    public CamionEntity(VehiculoDTO dto) {
+    public CamionetaEntity(VehiculoDTO dto) {
         super(dto.getVin(), dto.getMarca(), dto.getModelo(), dto.getAnio(), dto.getColor(), dto.getChasis(),
                 dto.getPlaca(), dto.getRam(), dto.getNumeroEjes(), dto.getNumeroAsientos(), dto.getTipoCombustible(),
                 dto.getPotencia(), dto.getUnidadPotencia());
         this.vin = dto.getVin();
-        this.tipoCamion = dto.getTipoEspecifico();
+        this.tipoCamioneta = dto.getTipoEspecifico();
     }
 
     public String getVin() {
@@ -41,16 +36,16 @@ public class CamionEntity extends VehiculoAbstract {
         this.vin = vin;
     }
 
-    public String getTipoCamion() {return tipoCamion;}
+    public String getTipoCamioneta() {return tipoCamioneta;}
 
-    public void setTipoCamion(String tipoCamion) {this.tipoCamion = tipoCamion;}
+    public void setTipoCamioneta(String tipoCamioneta) {this.tipoCamioneta = tipoCamioneta;}
 
     @Override
     public String toString() {
-         return super.toString() + "\n " +
-                 "Camion{" +
+        return super.toString() + "\n " +
+                "Camioneta{" +
                 "vin='" + vin + '\'' +
-                ", tipoCamion='" + tipoCamion + '\'' +
+                ", tipoCamion='" + tipoCamioneta + '\'' +
                 '}';
     }
 }

@@ -1,36 +1,31 @@
-package ec.edu.ups.pds.modelo.entity;
+package ec.edu.ups.pds.modelo.entity.factory;
 
-import ec.edu.ups.pds.dto.VehiculoDTO;
+import ec.edu.ups.pds.dto.factory.VehiculoDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "camioneta", schema = "factory")
-public class CamionetaEntity extends VehiculoAbstract {
+@Table(name = "auto", schema = "factory")
+public class AutoEntity extends VehiculoAbstract {
     @Id
     @Column(name="vin", nullable = false)
     private String vin;
 
-    @Column(name="tipo_camioneta", nullable = false)
-    private String tipoCamioneta;
+    @Column(name="tipo_auto", nullable = false)
+    private String tipoAuto;
 
-    public CamionetaEntity(String vin, String tipoCamion) {
-        this.vin = vin;
-        this.tipoCamioneta = tipoCamioneta;
-    }
-
-    public CamionetaEntity() {
+    public AutoEntity() {
 
     }
 
-    public CamionetaEntity(VehiculoDTO dto) {
+    public AutoEntity(VehiculoDTO dto) {
         super(dto.getVin(), dto.getMarca(), dto.getModelo(), dto.getAnio(), dto.getColor(), dto.getChasis(),
                 dto.getPlaca(), dto.getRam(), dto.getNumeroEjes(), dto.getNumeroAsientos(), dto.getTipoCombustible(),
                 dto.getPotencia(), dto.getUnidadPotencia());
         this.vin = dto.getVin();
-        this.tipoCamioneta = dto.getTipoEspecifico();
+        this.tipoAuto = dto.getTipoEspecifico();
     }
 
     public String getVin() {
@@ -41,16 +36,16 @@ public class CamionetaEntity extends VehiculoAbstract {
         this.vin = vin;
     }
 
-    public String getTipoCamioneta() {return tipoCamioneta;}
+    public String getTipoAuto() {return tipoAuto;}
 
-    public void setTipoCamioneta(String tipoCamioneta) {this.tipoCamioneta = tipoCamioneta;}
+    public void setTipoAuto(String tipoAuto) {this.tipoAuto = tipoAuto;}
 
     @Override
     public String toString() {
         return super.toString() + "\n " +
-                "Camioneta{" +
+                "Auto{" +
                 "vin='" + vin + '\'' +
-                ", tipoCamion='" + tipoCamioneta + '\'' +
+                ", tipoAuto='" + tipoAuto + '\'' +
                 '}';
     }
 }

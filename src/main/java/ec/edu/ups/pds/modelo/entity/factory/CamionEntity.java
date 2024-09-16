@@ -1,31 +1,31 @@
-package ec.edu.ups.pds.modelo.entity;
+package ec.edu.ups.pds.modelo.entity.factory;
 
-import ec.edu.ups.pds.dto.VehiculoDTO;
+import ec.edu.ups.pds.dto.factory.VehiculoDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "auto", schema = "factory")
-public class AutoEntity extends VehiculoAbstract {
+@Table(name = "camion", schema = "factory")
+public class CamionEntity extends VehiculoAbstract {
     @Id
     @Column(name="vin", nullable = false)
     private String vin;
 
-    @Column(name="tipo_auto", nullable = false)
-    private String tipoAuto;
+    @Column(name="tipo_camion", nullable = false)
+    private String tipoCamion;
 
-    public AutoEntity() {
+    public CamionEntity() {
 
     }
 
-    public AutoEntity(VehiculoDTO dto) {
+    public CamionEntity(VehiculoDTO dto) {
         super(dto.getVin(), dto.getMarca(), dto.getModelo(), dto.getAnio(), dto.getColor(), dto.getChasis(),
                 dto.getPlaca(), dto.getRam(), dto.getNumeroEjes(), dto.getNumeroAsientos(), dto.getTipoCombustible(),
                 dto.getPotencia(), dto.getUnidadPotencia());
         this.vin = dto.getVin();
-        this.tipoAuto = dto.getTipoEspecifico();
+        this.tipoCamion = dto.getTipoEspecifico();
     }
 
     public String getVin() {
@@ -36,16 +36,16 @@ public class AutoEntity extends VehiculoAbstract {
         this.vin = vin;
     }
 
-    public String getTipoAuto() {return tipoAuto;}
+    public String getTipoCamion() {return tipoCamion;}
 
-    public void setTipoAuto(String tipoAuto) {this.tipoAuto = tipoAuto;}
+    public void setTipoCamion(String tipoCamion) {this.tipoCamion = tipoCamion;}
 
     @Override
     public String toString() {
-        return super.toString() + "\n " +
-                "Auto{" +
+         return super.toString() + "\n " +
+                 "Camion{" +
                 "vin='" + vin + '\'' +
-                ", tipoAuto='" + tipoAuto + '\'' +
+                ", tipoCamion='" + tipoCamion + '\'' +
                 '}';
     }
 }
