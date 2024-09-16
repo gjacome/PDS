@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "camion", schema = "builder")
+@Table(name = "camion", schema = "factory")
 public class CamionEntity extends VehiculoAbstract {
     @Id
     @Column(name="vin", nullable = false)

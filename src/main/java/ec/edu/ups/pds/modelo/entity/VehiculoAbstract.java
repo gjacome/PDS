@@ -2,8 +2,8 @@ package ec.edu.ups.pds.modelo.entity;
 
 import jakarta.persistence.*;
 
-//@Entity
-//@Table(name = "vehiculo", schema = "builder")
+@Entity
+@Table(name = "abstract_vehiculo", schema = "factory")
 public abstract class VehiculoAbstract {
     @Id
     @Column(name="vin", nullable = false)
