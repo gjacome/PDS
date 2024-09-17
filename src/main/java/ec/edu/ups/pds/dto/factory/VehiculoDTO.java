@@ -45,60 +45,6 @@ public class VehiculoDTO {
         this.tipoVehiculo = tipoVehiculo;
     }
 
-    public VehiculoDTO(AutoEntity entity) {
-        this.vin = entity.getVin();
-        this.marca = entity.getMarca();
-        this.modelo = entity.getModelo();
-        this.anio = entity.getAnio();
-        this.color = entity.getColor();
-        this.chasis = entity.getChasis();
-        this.placa = entity.getPlaca();
-        this.ram = entity.getRam();
-        this.numeroEjes = entity.getNumeroEjes();
-        this.numeroAsientos = entity.getNumeroAsientos();
-        this.tipoCombustible = entity.getTipoCombustible();
-        this.potencia = entity.getPotencia();
-        this.unidadPotencia = entity.getUnidadPotencia();
-        this.tipoEspecifico = entity.getTipoAuto();
-        this.tipoVehiculo = TipoVehiculo.AUTO.toString();
-    }
-
-    public VehiculoDTO(CamionEntity entity) {
-        this.vin = entity.getVin();
-        this.marca = entity.getMarca();
-        this.modelo = entity.getModelo();
-        this.anio = entity.getAnio();
-        this.color = entity.getColor();
-        this.chasis = entity.getChasis();
-        this.placa = entity.getPlaca();
-        this.ram = entity.getRam();
-        this.numeroEjes = entity.getNumeroEjes();
-        this.numeroAsientos = entity.getNumeroAsientos();
-        this.tipoCombustible = entity.getTipoCombustible();
-        this.potencia = entity.getPotencia();
-        this.unidadPotencia = entity.getUnidadPotencia();
-        this.tipoEspecifico = entity.getTipoCamion();
-        this.tipoVehiculo = TipoVehiculo.AUTO.toString();
-    }
-
-    public VehiculoDTO(CamionetaEntity entity) {
-        this.vin = entity.getVin();
-        this.marca = entity.getMarca();
-        this.modelo = entity.getModelo();
-        this.anio = entity.getAnio();
-        this.color = entity.getColor();
-        this.chasis = entity.getChasis();
-        this.placa = entity.getPlaca();
-        this.ram = entity.getRam();
-        this.numeroEjes = entity.getNumeroEjes();
-        this.numeroAsientos = entity.getNumeroAsientos();
-        this.tipoCombustible = entity.getTipoCombustible();
-        this.potencia = entity.getPotencia();
-        this.unidadPotencia = entity.getUnidadPotencia();
-        this.tipoEspecifico = entity.getTipoCamioneta();
-        this.tipoVehiculo = TipoVehiculo.AUTO.toString();
-    }
-
     public String getVin() {
         return vin;
     }

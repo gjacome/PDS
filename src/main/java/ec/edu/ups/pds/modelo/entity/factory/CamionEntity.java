@@ -20,12 +20,12 @@ public class CamionEntity extends VehiculoAbstract {
 
     }
 
-    public CamionEntity(VehiculoDTO dto) {
-        super(dto.getVin(), dto.getMarca(), dto.getModelo(), dto.getAnio(), dto.getColor(), dto.getChasis(),
-                dto.getPlaca(), dto.getRam(), dto.getNumeroEjes(), dto.getNumeroAsientos(), dto.getTipoCombustible(),
-                dto.getPotencia(), dto.getUnidadPotencia());
-        this.vin = dto.getVin();
-        this.tipoCamion = dto.getTipoEspecifico();
+    public CamionEntity(String vin, String marca, String modelo, Short anio, String color, String chasis, String placa,
+                        String ram, Short numeroEjes, Short numeroAsientos, String tipoCombustible, Short potencia,
+                        String unidadPotencia, String tipoCamion) {
+        super(vin,marca,modelo,anio,color,chasis,placa,ram,numeroEjes,numeroAsientos,tipoCombustible,potencia,unidadPotencia);
+        this.vin = vin;
+        this.tipoCamion = tipoCamion;
     }
 
     public String getVin() {

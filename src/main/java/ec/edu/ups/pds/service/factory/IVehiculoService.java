@@ -7,5 +7,7 @@ import java.util.List;
 public interface IVehiculoService {
     void guardar(VehiculoDTO vehiculoDTO);
 
-    public List<VehiculoDTO> obtenerTodos();
+    List<VehiculoDTO> obtenerTodos();
+
+    Double obtenerMatricula(String tipoVehiculo);
 }

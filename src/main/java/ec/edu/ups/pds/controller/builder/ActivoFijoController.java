@@ -1,22 +1,23 @@
-package ec.edu.ups.pds.controller.factory;
+package ec.edu.ups.pds.controller.builder;
 
+import ec.edu.ups.pds.dto.builder.ActivoFijoDto;
 import ec.edu.ups.pds.dto.factory.VehiculoDTO;
-import ec.edu.ups.pds.service.factory.IVehiculoService;
+import ec.edu.ups.pds.service.builder.IActivoFijoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(value = "/vehiculo")
-public class VehiculoController {
+@RequestMapping(value = "/activo-fijo")
+public class ActivoFijoController {
     @Autowired
-    private IVehiculoService vehiculoService;
+    private IActivoFijoService activoFijoService;
 
     @PostMapping
-    public ResponseEntity guardar(@RequestBody VehiculoDTO vehiculoDTO) {
+    public ResponseEntity guardar(@RequestBody ActivoFijoDto activoFijo) {
         try {
-            vehiculoService.guardar(vehiculoDTO);
+            activoFijoService.guardar(activoFijo);
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(e.getMessage());
@@ -27,15 +28,10 @@ public class VehiculoController {
     @GetMapping
     public ResponseEntity obtenerTodos() {
         try {
-            return ResponseEntity.ok().body(vehiculoService.obtenerTodos());
+            return ResponseEntity.ok().body(activoFijoService.obtenerTodos());
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(e.getMessage());
         }
 
-    }
-
-    @GetMapping(value ="/matricula" )
-    public ResponseEntity obtenerMatricula(@RequestParam String tipoVehiculo) {
-        return ResponseEntity.ok().body(vehiculoService.obtenerMatricula(tipoVehiculo));
     }
 }

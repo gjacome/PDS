@@ -44,7 +44,9 @@ public abstract class VehiculoAbstract {
     @Column(name="unidad_potencia", nullable = false)
     private String unidadPotencia;
 
-    public VehiculoAbstract(String vin, String marca, String modelo, Short anio, String color, String chasis, String placa, String ram, Short numeroEjes, Short numeroAsientos, String tipoCombustible, Short potencia, String unidadPotencia) {
+    public VehiculoAbstract(String vin, String marca, String modelo, Short anio, String color, String chasis, String placa,
+                            String ram, Short numeroEjes, Short numeroAsientos, String tipoCombustible, Short potencia,
+                            String unidadPotencia) {
         this.vin = vin;
         this.marca = marca;
         this.modelo = modelo;

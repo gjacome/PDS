@@ -2,6 +2,7 @@ package ec.edu.ups.pds.service.impl.factory;
 
 import ec.edu.ups.pds.Enum.TipoVehiculo;
 import ec.edu.ups.pds.dto.factory.VehiculoDTO;
+import ec.edu.ups.pds.mapper.VehiculoMapper;
 import ec.edu.ups.pds.modelo.entity.factory.AutoEntity;
 import ec.edu.ups.pds.modelo.entity.factory.CamionEntity;
 import ec.edu.ups.pds.modelo.entity.factory.CamionetaEntity;
@@ -53,12 +54,27 @@ public class VehiculoServiceImpl implements IVehiculoService {
         List<CamionetaEntity> camionetas = camionetaRepository.findAll();
         List<VehiculoDTO> respuesta = new ArrayList<>();
 
-        autos.forEach(autoEntity -> respuesta.add(new VehiculoDTO(autoEntity)));
-        camiones.forEach(camionEntity -> respuesta.add(new VehiculoDTO(camionEntity)));
-        camionetas.forEach(camionetaEntity -> respuesta.add(new VehiculoDTO(camionetaEntity)));
+        autos.forEach(autoEntity -> respuesta.add(VehiculoMapper.getVehiculoDTO(autoEntity)));
+        camiones.forEach(camionEntity -> respuesta.add(VehiculoMapper.getVehiculoDTO(camionEntity)));
+        camionetas.forEach(camionetaEntity -> respuesta.add(VehiculoMapper.getVehiculoDTO(camionetaEntity)));
 
         return respuesta;
 
+    }
+
+    @Override
+    public Double obtenerMatricula(String tipoVehiculo) {
+        var opcion = TipoVehiculo.valueOf(tipoVehiculo);
+        switch (opcion) {
+            case AUTO:
+                return 756.12;
+            case CAMION:
+                return 2408.66;
+            case CAMIONETA:
+                return 1352.48;
+        }
+
+        return 0.00;
     }
 
 }
