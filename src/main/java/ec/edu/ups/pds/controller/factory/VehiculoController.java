@@ -35,7 +35,7 @@ public class VehiculoController {
     }
 
     @GetMapping(value ="/matricula" )
-    public ResponseEntity obtenerMatricula(@RequestParam String tipoVehiculo) {
-        return ResponseEntity.ok().body(vehiculoService.obtenerMatricula(tipoVehiculo));
+    public ResponseEntity calcularCostoMatricula(@RequestParam String tipoVehiculo) {
+        return ResponseEntity.ok().body(vehiculoService.calcularCostoMatricula(tipoVehiculo));
     }
 }

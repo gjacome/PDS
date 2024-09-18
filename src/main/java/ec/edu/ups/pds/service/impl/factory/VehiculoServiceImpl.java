@@ -63,7 +63,7 @@ public class VehiculoServiceImpl implements IVehiculoService {
     }
 
     @Override
-    public Double obtenerMatricula(String tipoVehiculo) {
+    public Double calcularCostoMatricula(String tipoVehiculo) {
         var opcion = TipoVehiculo.valueOf(tipoVehiculo);
         switch (opcion) {
             case AUTO:

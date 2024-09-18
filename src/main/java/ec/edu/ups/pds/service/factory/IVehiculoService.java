@@ -9,5 +9,5 @@ public interface IVehiculoService {
 
     List<VehiculoDTO> obtenerTodos();
 
-    Double obtenerMatricula(String tipoVehiculo);
+    Double calcularCostoMatricula(String tipoVehiculo);
 }
