@@ -1,6 +1,5 @@
-package ec.edu.ups.pds.modelo.entity.factory;
+package ec.edu.ups.pds.entity.factory;
 
-import ec.edu.ups.pds.dto.factory.VehiculoDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

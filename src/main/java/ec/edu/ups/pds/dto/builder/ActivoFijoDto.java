@@ -1,8 +1,5 @@
 package ec.edu.ups.pds.dto.builder;
 
-import ec.edu.ups.pds.modelo.entity.builder.ActivoFijoEntity;
-import jakarta.persistence.Column;
-
 import java.util.Date;
 
 public class ActivoFijoDto {

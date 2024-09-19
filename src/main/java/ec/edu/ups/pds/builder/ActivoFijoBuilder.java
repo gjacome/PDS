@@ -1,6 +1,6 @@
-package ec.edu.ups.pds.modelo.builder;
+package ec.edu.ups.pds.builder;
 
-import ec.edu.ups.pds.modelo.entity.builder.ActivoFijoEntity;
+import ec.edu.ups.pds.entity.builder.ActivoFijoEntity;
 
 import java.util.Date;
 

@@ -2,8 +2,8 @@ package ec.edu.ups.pds.service.impl.builder;
 
 import ec.edu.ups.pds.dto.builder.ActivoFijoDto;
 import ec.edu.ups.pds.mapper.ActivoFijoMapper;
-import ec.edu.ups.pds.modelo.builder.ActivoFijoBuilder;
-import ec.edu.ups.pds.modelo.entity.builder.ActivoFijoEntity;
+import ec.edu.ups.pds.builder.ActivoFijoBuilder;
+import ec.edu.ups.pds.entity.builder.ActivoFijoEntity;
 import ec.edu.ups.pds.repository.builder.ActivoFijoRepository;
 import ec.edu.ups.pds.service.builder.IActivoFijoService;
 import org.springframework.beans.factory.annotation.Autowired;

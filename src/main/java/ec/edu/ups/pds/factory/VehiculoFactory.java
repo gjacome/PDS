@@ -1,12 +1,9 @@
-package ec.edu.ups.pds.modelo.factory;
+package ec.edu.ups.pds.factory;
 
 import ec.edu.ups.pds.Enum.TipoVehiculo;
 import ec.edu.ups.pds.dto.factory.VehiculoDTO;
 import ec.edu.ups.pds.mapper.VehiculoMapper;
-import ec.edu.ups.pds.modelo.entity.factory.AutoEntity;
-import ec.edu.ups.pds.modelo.entity.factory.CamionEntity;
-import ec.edu.ups.pds.modelo.entity.factory.CamionetaEntity;
-import ec.edu.ups.pds.modelo.entity.factory.VehiculoAbstract;
+import ec.edu.ups.pds.entity.factory.VehiculoAbstract;
 
 public class VehiculoFactory extends AbstractVehiculoFactory{
     @Override

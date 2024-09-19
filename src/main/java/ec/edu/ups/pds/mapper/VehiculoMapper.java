@@ -2,9 +2,9 @@ package ec.edu.ups.pds.mapper;
 
 import ec.edu.ups.pds.Enum.TipoVehiculo;
 import ec.edu.ups.pds.dto.factory.VehiculoDTO;
-import ec.edu.ups.pds.modelo.entity.factory.AutoEntity;
-import ec.edu.ups.pds.modelo.entity.factory.CamionEntity;
-import ec.edu.ups.pds.modelo.entity.factory.CamionetaEntity;
+import ec.edu.ups.pds.entity.factory.AutoEntity;
+import ec.edu.ups.pds.entity.factory.CamionEntity;
+import ec.edu.ups.pds.entity.factory.CamionetaEntity;
 
 public class VehiculoMapper {
     public static VehiculoDTO getVehiculoDTO(AutoEntity entity) {

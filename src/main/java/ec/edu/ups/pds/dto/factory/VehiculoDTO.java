@@ -1,10 +1,5 @@
 package ec.edu.ups.pds.dto.factory;
 
-import ec.edu.ups.pds.Enum.TipoVehiculo;
-import ec.edu.ups.pds.modelo.entity.factory.AutoEntity;
-import ec.edu.ups.pds.modelo.entity.factory.CamionEntity;
-import ec.edu.ups.pds.modelo.entity.factory.CamionetaEntity;
-
 public class VehiculoDTO {
     private String vin;
     private String marca;

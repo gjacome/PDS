@@ -1,4 +1,4 @@
-package ec.edu.ups.pds.modelo.entity.builder;
+package ec.edu.ups.pds.entity.builder;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

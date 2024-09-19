@@ -1,7 +1,7 @@
 package ec.edu.ups.pds.mapper;
 
 import ec.edu.ups.pds.dto.builder.ActivoFijoDto;
-import ec.edu.ups.pds.modelo.entity.builder.ActivoFijoEntity;
+import ec.edu.ups.pds.entity.builder.ActivoFijoEntity;
 
 public class ActivoFijoMapper {
     public static ActivoFijoDto getDto(ActivoFijoEntity entity){

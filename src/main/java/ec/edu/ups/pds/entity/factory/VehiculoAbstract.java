@@ -1,4 +1,4 @@
-package ec.edu.ups.pds.modelo.entity.factory;
+package ec.edu.ups.pds.entity.factory;
 
 import jakarta.persistence.*;
 
