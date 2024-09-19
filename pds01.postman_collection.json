@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "0545164b-eefd-42dd-a7cf-936bf83fddc8",
+		"name": "pds01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11178168"
+	},
+	"item": [
+		{
+			"name": "GetAll Vehiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://185.209.230.19:8080/vehiculo",
+					"protocol": "http",
+					"host": [
+						"185",
+						"209",
+						"230",
+						"19"
+					],
+					"port": "8080",
+					"path": [
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar vehiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vin\": \"LDP12345678901299\",\r\n    \"marca\": \"VOLVO\",\r\n    \"modelo\": \"CAMION\",\r\n    \"anio\": 2020,\r\n    \"color\": \"NEGRO\",\r\n    \"chasis\": \"123ABC\",\r\n    \"placa\": null,\r\n    \"ram\": \"X58S9\",\r\n    \"numeroEjes\": 4,\r\n    \"numeroAsientos\": 2,\r\n    \"tipoCombustible\": \"DIESEL\",\r\n    \"potencia\": 6500,\r\n    \"unidadPotencia\": \"CC\",\r\n    \"tipoEspecifico\": \"MULTIPLATAFORMA\",\r\n    \"tipoVehiculo\": \"CAMION\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://185.209.230.19:8080/vehiculo",
+					"protocol": "http",
+					"host": [
+						"185",
+						"209",
+						"230",
+						"19"
+					],
+					"port": "8080",
+					"path": [
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Matricula",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://185.209.230.19:8080/vehiculo/matricula?tipoVehiculo=CAMION",
+					"protocol": "http",
+					"host": [
+						"185",
+						"209",
+						"230",
+						"19"
+					],
+					"port": "8080",
+					"path": [
+						"vehiculo",
+						"matricula"
+					],
+					"query": [
+						{
+							"key": "tipoVehiculo",
+							"value": "CAMION"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getall Activo Fijo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://185.209.230.19:8080/activo-fijo",
+					"protocol": "http",
+					"host": [
+						"185",
+						"209",
+						"230",
+						"19"
+					],
+					"port": "8080",
+					"path": [
+						"activo-fijo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Activo Fijo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": \"001\",\r\n    \"nombre\": \"Auto Gerencia\",\r\n    \"precio\": 48999.00,\r\n    \"esDepreciable\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://185.209.230.19:8080/activo-fijo",
+					"protocol": "http",
+					"host": [
+						"185",
+						"209",
+						"230",
+						"19"
+					],
+					"port": "8080",
+					"path": [
+						"activo-fijo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
